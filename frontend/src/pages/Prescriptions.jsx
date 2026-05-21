@@ -147,6 +147,7 @@ export default function Prescriptions() {
         </div>
       )}
 
+      
       {filtered.length === 0 ? (
         <div className="text-center py-16 card" style={{ color: "var(--slate-400)" }}>
           <p className="text-4xl mb-3">💊</p>
