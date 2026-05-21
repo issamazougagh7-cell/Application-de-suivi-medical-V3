@@ -97,9 +97,9 @@ export default function FindDoctor() {
               Send Connection Request
             </button>
           )}
-        </div>
-      )}
+        </div>)}
 
+      
       <div className="mt-8 p-5 rounded-2xl fade-up delay-2" style={{ background: "var(--teal-50)", border: "1px dashed var(--teal-200)" }}>
         <p className="text-sm font-semibold mb-1" style={{ color: "var(--teal-700)" }}>How it works</p>
         <ol className="text-sm space-y-1" style={{ color: "var(--slate-600)" }}>
