@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --teal-950: #0a1628;
+  --teal-900: #0d2137;
+  --teal-700: #0e4d6e;
+  --teal-500: #0d7a9e;
+  --teal-400: #15a5c8;
+  --teal-200: #a8dcea;
+  --teal-50:  #f0f9fc;
+  --gold-400: #e8b84b;
+  --gold-300: #f2cc7a;
+  --cream:    #fdf8f0;
+  --slate-800: #1e2a3b;
+  --slate-600: #3d4f65;
+  --slate-400: #7a8fa8;
+  --slate-200: #d1dce8;
+  --slate-100: #eef2f7;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--teal-50);
+  color: var(--slate-800);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: 'DM Serif Display', serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--teal-200); border-radius: 10px; }
+
+/* Card base */
+.card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(13, 33, 55, 0.07);
+  border: 1px solid var(--slate-200);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--teal-500), var(--teal-400));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Status badges */
+.badge-pending  { background: #fff8e1; color: #b45309; }
+.badge-confirmed { background: #ecfdf5; color: #065f46; }
+.badge-cancelled { background: #fef2f2; color: #991b1b; }
+.badge-completed { background: #eff6ff; color: #1d4ed8; }
+.badge-accepted  { background: #ecfdf5; color: #065f46; }
+.badge-rejected  { background: #fef2f2; color: #991b1b; }
+
+/* Input base */
+.input-base {
+  @apply w-full px-4 py-3 rounded-xl border text-sm outline-none transition-all duration-200;
+  border-color: var(--slate-200);
+  background: var(--teal-50);
+}
+.input-base:focus {
+  border-color: var(--teal-400);
+  box-shadow: 0 0 0 3px rgba(21,165,200,0.12);
+  background: white;
+}
+
+/* Button primary */
+.btn-primary {
+  @apply font-medium text-sm px-5 py-3 rounded-xl transition-all duration-200 text-white;
+  background: linear-gradient(135deg, var(--teal-500), var(--teal-400));
+  box-shadow: 0 4px 15px rgba(13, 122, 158, 0.35);
+}
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(13, 122, 158, 0.45);
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.4s ease forwards; }
+.delay-1 { animation-delay: 0.08s; opacity: 0; }
+.delay-2 { animation-delay: 0.16s; opacity: 0; }
+.delay-3 { animation-delay: 0.24s; opacity: 0; }
+.delay-4 { animation-delay: 0.32s; opacity: 0; }
